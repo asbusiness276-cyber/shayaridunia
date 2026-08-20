@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shayari Dunia | हर एहसास के लिए खूबसूरत शायरी",
   description: "Shayari Dunia पर पढ़ें Love, Sad, Romantic, Attitude, Dosti और Motivational Shayari. Copy, share और अपनी पसंद की शायरी खोजें。",
+  verification: {
+    google: "a_CiQfJW_OreqfkTzwJpx9107P9pIhnerfUtHZd8lQs",
+  },
 };
 
 export default function RootLayout({
