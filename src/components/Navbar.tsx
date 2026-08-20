@@ -113,6 +113,9 @@ export default function Navbar() {
                 </div>
               </div>
             ))}
+            <Link href="/collections" className="text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Collections
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               About
             </Link>
@@ -172,6 +175,9 @@ export default function Navbar() {
             <div className="mt-6 border-t border-gray-100 pt-4 space-y-2">
               <Link href="/categories" className="block px-3 py-2 rounded-md text-base font-bold text-pink-600 bg-pink-50 hover:bg-pink-100">
                 All Categories Grid
+              </Link>
+              <Link href="/collections" className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">
+                Collections
               </Link>
               <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">
                 About

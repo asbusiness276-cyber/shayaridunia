@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import shayariData from '@/data/shayaris.json';
+import { collectionsData } from '@/data/collections';
 
 const BASE_URL = 'https://shayaridunia.com';
 
@@ -7,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapData: MetadataRoute.Sitemap = [];
 
   // 1. Static Pages
-  const staticPages = ['', '/about', '/categories', '/contact', '/privacy', '/terms'];
+  const staticPages = ['', '/about', '/categories', '/collections', '/contact', '/privacy', '/terms'];
   staticPages.forEach((page) => {
     sitemapData.push({
       url: `${BASE_URL}${page}`,
@@ -47,7 +48,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 4. Individual Shayari Pages
+  // 4. Collections Pages
+  collectionsData.forEach((collection) => {
+    sitemapData.push({
+      url: `${BASE_URL}/collections/${collection.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    });
+  });
+
+  // 5. Individual Shayari Pages
   shayariData.forEach((shayari) => {
     sitemapData.push({
       url: `${BASE_URL}/shayari/${shayari.slug}`,
