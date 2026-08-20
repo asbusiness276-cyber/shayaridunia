@@ -143,7 +143,7 @@ export default function Home() {
           </Link>
           
           <Link href="/punjabi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605703819853-29a8a7ebdfaf?auto=format&fit=crop&q=80')" }}></div>
+            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-extrabold text-white mb-2">Punjabi Shayari</h3>
@@ -155,7 +155,7 @@ export default function Home() {
           </Link>
 
           <Link href="/english" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1455390582262-044cdead2708?auto=format&fit=crop&q=80')" }}></div>
+            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&auto=format&fit=crop&q=60')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-extrabold text-white mb-2">English Quotes</h3>
