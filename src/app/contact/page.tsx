@@ -5,7 +5,7 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12 text-center">Contact Us</h1>
       
-      <div className="bg-white rounded-3xl p-8 md:p-16 shadow-xl border border-pink-100 text-center max-w-2xl mx-auto mb-20 relative overflow-hidden">
+      <div className="bg-white rounded-3xl p-8 md:p-16 shadow-xl border border-pink-100 text-center max-w-2xl mx-auto mb-12 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
         

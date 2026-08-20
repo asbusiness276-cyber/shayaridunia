@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* Quote of the Day Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 relative z-10 -mt-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10 -mt-6">
         <div className="bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-purple-500/10">
           <span className="text-pink-600 text-sm font-bold uppercase tracking-widest mb-6 block">TODAY'S PICK ♡</span>
           <blockquote className="text-3xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight">
@@ -75,8 +75,8 @@ export default function Home() {
       </div>
 
       {/* Colorful Categories Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="text-center mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="text-center mb-10">
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block">EXPLORE MOODS</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">आज दिल किस mood में है?</h2>
         </div>
@@ -104,10 +104,10 @@ export default function Home() {
       </div>
 
       {/* Latest Shayaris Grid (Making it Bhara Bhara) */}
-      <div className="bg-gray-900 py-24 mb-24 relative overflow-hidden">
+      <div className="bg-gray-900 py-16 mb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534796636918-9f1d0ca8066f?q=80&w=2000&auto=format&fit=crop')" }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="text-pink-400 font-bold tracking-wider uppercase text-sm mb-2 block">FRESH DROPS</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Latest Additions</h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">Browse our newest and most trending shayaris across all languages.</p>
@@ -119,7 +119,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-12 text-center">
             <Link href="/hindi" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300">
               View All 900+ Shayaris
             </Link>
@@ -128,7 +128,7 @@ export default function Home() {
       </div>
 
       {/* Languages Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="grid md:grid-cols-3 gap-6">
           <Link href="/hindi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80')" }}></div>
@@ -169,9 +169,9 @@ export default function Home() {
       </div>
 
       {/* FAQ Section */}
-      <div className="py-24 bg-white/50 backdrop-blur-lg">
+      <div className="py-16 bg-white/50 backdrop-blur-lg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-6">
@@ -185,7 +185,7 @@ export default function Home() {
         </div>
 
         {/* Extended SEO Content Block */}
-        <div className="max-w-4xl mx-auto pt-24 mt-24 border-t-2 border-pink-100 prose prose-lg prose-pink text-gray-700 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto pt-12 mt-12 border-t-2 border-pink-100 prose prose-lg prose-pink text-gray-700 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Welcome to Shayari Dunia: Your Ultimate Poetry Destination</h2>
           <p>
             In a fast-paced world dominated by quick texts and emojis, the profound beauty of carefully chosen words often gets lost. Welcome to <strong>Shayari Dunia</strong>, a digital sanctuary dedicated to the timeless art of poetry, quotes, and Shayari. We believe that whether you are experiencing the intoxicating heights of love, the crushing weight of heartbreak, the joy of true friendship, or the need for daily motivation, there is a piece of poetry out there that perfectly encapsulates your feelings.
