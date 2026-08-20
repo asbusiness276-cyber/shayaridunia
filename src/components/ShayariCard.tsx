@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Share2, Copy, Download } from 'lucide-react';
 import { useRef } from 'react';
 import { toPng } from 'html-to-image';
-import { generateSlug } from '@/utils/slugify';
 
 interface ShayariCardProps {
   shayari: {
@@ -16,13 +15,14 @@ interface ShayariCardProps {
     language: string;
     category: string;
     alt_text: string;
+    slug?: string;
   };
   isDetail?: boolean;
 }
 
 export default function ShayariCard({ shayari, isDetail = false }: ShayariCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const slug = generateSlug(shayari);
+  const slug = shayari.slug || shayari.id.toString();
 
   const handleDownload = async () => {
     if (cardRef.current === null) return;

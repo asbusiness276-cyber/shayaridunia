@@ -2,7 +2,6 @@ import ShayariCard from '@/components/ShayariCard';
 import shayariData from '@/data/shayaris.json';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { generateSlug, getIdFromSlug } from '@/utils/slugify';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -10,8 +9,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const id = getIdFromSlug(resolvedParams.slug);
-  const shayari = shayariData.find((s) => s.id === id);
+  const shayari = shayariData.find((s) => s.slug === resolvedParams.slug);
   
   if (!shayari) {
     return { title: 'Shayari Not Found - Shayari Dunia' };
@@ -36,14 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export function generateStaticParams() {
   return shayariData.map((shayari) => ({
-    slug: generateSlug(shayari),
+    slug: shayari.slug,
   }));
 }
 
 export default async function ShayariDetailPage({ params }: Props) {
   const resolvedParams = await params;
-  const id = getIdFromSlug(resolvedParams.slug);
-  const shayari = shayariData.find((s) => s.id === id);
+  const shayari = shayariData.find((s) => s.slug === resolvedParams.slug);
 
   if (!shayari) {
     notFound();
@@ -51,7 +48,6 @@ export default async function ShayariDetailPage({ params }: Props) {
 
   const langUpper = shayari.language.charAt(0).toUpperCase() + shayari.language.slice(1);
   const catUpper = shayari.category.charAt(0).toUpperCase() + shayari.category.slice(1);
-  const expectedSlug = generateSlug(shayari);
 
   // Generate JSON-LD Structured Data for Google Rich Snippets
   const jsonLd = {
@@ -66,7 +62,7 @@ export default async function ShayariDetailPage({ params }: Props) {
     },
     'image': shayari.image,
     'keywords': `${langUpper} shayari, ${catUpper} shayari`,
-    'url': `https://shayariduniacom.vercel.app/shayari/${expectedSlug}`
+    'url': `https://shayariduniacom.vercel.app/shayari/${shayari.slug}`
   };
 
   return (

@@ -49,13 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 4. Individual Shayari Pages (900+ Pages)
   shayariData.forEach((shayari) => {
-    // Generate the exact same slug used by the pages and links
-    const firstLine = shayari.text.split('\n')[0].replace(/[^\w\s\u0900-\u097F]/gi, '').trim().split(/\s+/).slice(0, 5).join('-');
-    const baseSlug = `${firstLine}-best-${shayari.category}-shayari-${shayari.language}`;
-    const slug = `${baseSlug.replace(/-+/g, '-').toLowerCase()}-${shayari.id}`;
-
     sitemapData.push({
-      url: `${BASE_URL}/shayari/${slug}`,
+      url: `${BASE_URL}/shayari/${shayari.slug}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
