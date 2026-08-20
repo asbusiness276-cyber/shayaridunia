@@ -1,134 +1,191 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import { ChevronRight, Sparkles } from 'lucide-react';
+import shayariData from '@/data/shayaris.json';
+import ShayariCard from '@/components/ShayariCard';
 import { Metadata } from 'next';
-import { ChevronRight, Heart, Share2, Download } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Shayari Dunia - Best Hindi, Punjabi & English Shayari Collection',
-  description: 'Welcome to Shayari Dunia. Discover the best top 50 shayaris in Hindi, Punjabi, and English. Read, share, and download beautiful poetry with background images.',
+  description: 'Explore our vast collection of heart touching shayaris, quotes, and status messages in Hindi, Punjabi, and English.',
 };
 
 export default function Home() {
   const faqs = [
     {
-      question: "What languages are available on Shayari Dunia?",
-      answer: "We currently offer beautifully curated collections of Shayari in three languages: Hindi, Punjabi, and English. You can easily navigate to your preferred language from our homepage."
+      question: "Are the shayaris free to use?",
+      answer: "Yes! All shayaris and quotes on our website are completely free to read, download, and share on your social media."
     },
     {
-      question: "Can I download the Shayaris with images?",
-      answer: "Yes! Every single Shayari comes with a high-quality background image. You can use the 'Download' button on any post to instantly save it as an image to your device."
+      question: "How do I download a shayari image?",
+      answer: "Simply click the 'Download' button on any shayari card, and it will automatically generate and save a high-quality image to your device."
     },
     {
-      question: "Are the Shayaris free to share on WhatsApp and Instagram?",
-      answer: "Absolutely. We encourage you to share our poetry with your friends and family. You can use our built-in share buttons or simply download the images to post them on your status or stories."
-    },
-    {
-      question: "How often is the collection updated?",
-      answer: "We regularly update our 'Best Top 50' lists to ensure you always have fresh, meaningful, and heart-touching content to read and share."
+      question: "Do you update the collection regularly?",
+      answer: "Absolutely. Our team curates and adds new Hindi, Punjabi, and English poetry to our database on a regular basis."
     }
   ];
 
+  // Get a mix of latest shayaris from different languages
+  const latestShayaris = [
+    ...shayariData.filter(s => s.language === 'hindi').slice(0, 3),
+    ...shayariData.filter(s => s.language === 'punjabi').slice(0, 3),
+    ...shayariData.filter(s => s.language === 'english').slice(0, 3)
+  ];
+
   return (
-    <div>
-      {/* Features Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Curated with Love</h3>
-              <p className="text-gray-500">Only the most meaningful and deepest lines make it to our top collections.</p>
-            </div>
-            <div className="p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Downloads</h3>
-              <p className="text-gray-500">Download any Shayari as a beautiful high-resolution image with one click.</p>
-            </div>
-            <div className="p-6">
-              <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Share2 className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Easy Sharing</h3>
-              <p className="text-gray-500">Share your favorite quotes directly to WhatsApp, Instagram, and more.</p>
-            </div>
+    <div className="bg-gradient-to-b from-indigo-50 via-white to-pink-50 min-h-screen">
+      
+      {/* Vibrant Hero Section */}
+      <div className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-32 left-1/2 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-4000"></div>
+        
+        <div className="relative text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-pink-200 text-pink-600 font-bold tracking-wider uppercase text-xs mb-8 shadow-sm">
+            <Sparkles className="w-4 h-4" /> SHAYARI • FEELINGS • WORDS
+          </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">
+            कुछ एहसास <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 italic drop-shadow-sm">लफ़्ज़ों से बड़े होते हैं।</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+            जो बात दिल में रह जाती है, उसे शायरी कह देती है। अपने mood की शायरी पढ़ें, copy करें और अपनों तक पहुँचाएँ।
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/hindi" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 shadow-xl hover:shadow-pink-500/40 transition-all duration-300 w-full sm:w-auto transform hover:-translate-y-1">
+              Explore Hindi Shayari
+            </Link>
+            <Link href="/punjabi" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-purple-700 bg-white border-2 border-purple-100 hover:border-purple-300 shadow-md transition-all duration-300 w-full sm:w-auto">
+              Read Punjabi Poetry
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Categories Section */}
-      <div className="py-20 bg-gray-50 border-t border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Quote of the Day Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 relative z-10 -mt-6">
+        <div className="bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-purple-500/10">
+          <span className="text-pink-600 text-sm font-bold uppercase tracking-widest mb-6 block">TODAY'S PICK ♡</span>
+          <blockquote className="text-3xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight">
+            "कभी-कभी खामोशी भी<br />सबसे खूबसूरत शायरी होती है।"
+          </blockquote>
+          <cite className="text-gray-500 font-bold uppercase tracking-widest block">— Shayari Dunia</cite>
+        </div>
+      </div>
+
+      {/* Colorful Categories Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="text-center mb-12">
+          <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block">EXPLORE MOODS</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">आज दिल किस mood में है?</h2>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
+          {[
+            { id: 'love', name: 'Love Shayari', icon: '♡', hindi: 'मोहब्बत के एहसास', bg: 'bg-gradient-to-br from-rose-400 to-red-500', shadow: 'shadow-rose-500/30' },
+            { id: 'sad', name: 'Sad Shayari', icon: '☾', hindi: 'दर्द जो कहा नहीं', bg: 'bg-gradient-to-br from-blue-400 to-indigo-500', shadow: 'shadow-blue-500/30' },
+            { id: 'attitude', name: 'Attitude', icon: '✦', hindi: 'अपना अंदाज़', bg: 'bg-gradient-to-br from-amber-400 to-orange-500', shadow: 'shadow-amber-500/30' },
+            { id: 'dosti', name: 'Dosti Shayari', icon: '∞', hindi: 'यारों के नाम', bg: 'bg-gradient-to-br from-emerald-400 to-teal-500', shadow: 'shadow-emerald-500/30' },
+            { id: 'morning', name: 'Good Morning', icon: '☀', hindi: 'नई शुरुआत', bg: 'bg-gradient-to-br from-yellow-400 to-amber-500', shadow: 'shadow-yellow-500/30' },
+            { id: 'festival', name: 'Festivals', icon: '✨', hindi: 'खुशियों के पल', bg: 'bg-gradient-to-br from-fuchsia-400 to-purple-500', shadow: 'shadow-fuchsia-500/30' }
+          ].map((cat) => (
+            <Link 
+              key={cat.id} 
+              href={`/hindi/category/${cat.id}`}
+              className={`group flex flex-col items-center justify-center p-6 rounded-3xl ${cat.bg} text-white shadow-lg ${cat.shadow} transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
+            >
+              <span className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-300 drop-shadow-md">{cat.icon}</span>
+              <span className="font-extrabold mb-1 text-center text-sm md:text-base drop-shadow-sm">{cat.name}</span>
+              <span className="text-xs text-white/80 text-center font-medium">{cat.hindi}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Latest Shayaris Grid (Making it Bhara Bhara) */}
+      <div className="bg-gray-900 py-24 mb-24 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1534796636918-9f1d0ca8066f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Explore Our Categories</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Choose your preferred language and dive into a world of emotions.</p>
+            <span className="text-pink-400 font-bold tracking-wider uppercase text-sm mb-2 block">FRESH DROPS</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Latest Additions</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">Browse our newest and most trending shayaris across all languages.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Hindi Card */}
-            <Link href="/hindi" className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-80">
-              <Image src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&auto=format&fit=crop&q=60" alt="Hindi Shayari" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors"></div>
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-3xl font-bold text-white mb-2">Hindi Shayari</h3>
-                <p className="text-gray-200 mb-4">Explore the best Top 50 Hindi poetry.</p>
-                <div className="flex items-center text-pink-400 font-medium group-hover:text-pink-300">
-                  Read Collection <ChevronRight className="w-5 h-5 ml-1" />
-                </div>
-              </div>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {latestShayaris.map((shayari) => (
+              <ShayariCard key={shayari.id} shayari={shayari} />
+            ))}
+          </div>
 
-            {/* Punjabi Card */}
-            <Link href="/punjabi" className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-80">
-              <Image src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=60" alt="Punjabi Shayari" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors"></div>
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-3xl font-bold text-white mb-2">Punjabi Shayari</h3>
-                <p className="text-gray-200 mb-4">Soulful and heart-touching Punjabi lines.</p>
-                <div className="flex items-center text-pink-400 font-medium group-hover:text-pink-300">
-                  Read Collection <ChevronRight className="w-5 h-5 ml-1" />
-                </div>
-              </div>
-            </Link>
-
-            {/* English Card */}
-            <Link href="/english" className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all h-80">
-              <Image src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&auto=format&fit=crop&q=60" alt="English Shayari" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors"></div>
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-3xl font-bold text-white mb-2">English Quotes</h3>
-                <p className="text-gray-200 mb-4">Modern and deep English poetry.</p>
-                <div className="flex items-center text-pink-400 font-medium group-hover:text-pink-300">
-                  Read Collection <ChevronRight className="w-5 h-5 ml-1" />
-                </div>
-              </div>
+          <div className="mt-16 text-center">
+            <Link href="/hindi" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-300">
+              View All 900+ Shayaris
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Languages Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link href="/hindi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 className="text-3xl font-extrabold text-white mb-2">Hindi Shayari</h3>
+              <p className="text-gray-300 mb-4 font-medium">Explore the depth of Hindustani emotions.</p>
+              <div className="inline-flex items-center text-pink-400 font-bold group-hover:text-pink-300">
+                Read Collection <ChevronRight className="w-5 h-5 ml-1" />
+              </div>
+            </div>
+          </Link>
+          
+          <Link href="/punjabi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605703819853-29a8a7ebdfaf?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 className="text-3xl font-extrabold text-white mb-2">Punjabi Shayari</h3>
+              <p className="text-gray-300 mb-4 font-medium">Raw, earthy, and profound Punjabi verses.</p>
+              <div className="inline-flex items-center text-pink-400 font-bold group-hover:text-pink-300">
+                Read Collection <ChevronRight className="w-5 h-5 ml-1" />
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/english" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1455390582262-044cdead2708?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 className="text-3xl font-extrabold text-white mb-2">English Quotes</h3>
+              <p className="text-gray-300 mb-4 font-medium">Modern and deep English poetry.</p>
+              <div className="inline-flex items-center text-pink-400 font-bold group-hover:text-pink-300">
+                Read Collection <ChevronRight className="w-5 h-5 ml-1" />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 
       {/* FAQ Section */}
-      <div className="py-20 bg-white">
+      <div className="py-24 bg-white/50 backdrop-blur-lg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600">Everything you need to know about Shayari Dunia.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
-          
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-pink-100 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
+
         {/* Extended SEO Content Block */}
-        <div className="max-w-4xl mx-auto border-t border-gray-100 pt-16 mt-16 prose prose-lg prose-pink text-gray-700">
+        <div className="max-w-4xl mx-auto pt-24 mt-24 border-t-2 border-pink-100 prose prose-lg prose-pink text-gray-700 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Welcome to Shayari Dunia: Your Ultimate Poetry Destination</h2>
           <p>
             In a fast-paced world dominated by quick texts and emojis, the profound beauty of carefully chosen words often gets lost. Welcome to <strong>Shayari Dunia</strong>, a digital sanctuary dedicated to the timeless art of poetry, quotes, and Shayari. We believe that whether you are experiencing the intoxicating heights of love, the crushing weight of heartbreak, the joy of true friendship, or the need for daily motivation, there is a piece of poetry out there that perfectly encapsulates your feelings.
