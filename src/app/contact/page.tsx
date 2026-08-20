@@ -1,53 +1,34 @@
+import { Mail } from 'lucide-react';
+
 export default function ContactPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">Contact Us</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12 text-center">Contact Us</h1>
       
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-        <div className="text-center mb-10">
-          <p className="text-lg text-gray-600 mb-6">
-            We would love to hear from you! If you have any suggestions, want to submit your own Shayari, or have any business inquiries, please reach out to us at our official email:
+      <div className="bg-white rounded-3xl p-8 md:p-16 shadow-xl border border-pink-100 text-center max-w-2xl mx-auto mb-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        
+        <div className="relative">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-pink-50 text-pink-600 mb-8 shadow-sm border border-pink-100">
+            <Mail className="w-10 h-10" />
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Drop us an Email</h2>
+          <p className="text-lg text-gray-600 mb-10 max-w-md mx-auto leading-relaxed">
+            For any content suggestions, poetry submissions, technical support, or business inquiries, feel free to reach out to us directly.
           </p>
           <a 
-            href="mailto:asbusiness276@gmail.com" 
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 shadow-sm transition-all hover:scale-105"
+            href="mailto:asbusiness276@gmail.com"
+            className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold rounded-full text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 shadow-xl hover:shadow-pink-500/40 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
           >
+            <Mail className="w-6 h-6 mr-3" />
             asbusiness276@gmail.com
           </a>
         </div>
-        
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center" aria-hidden="true">
-            <div className="w-full border-t border-gray-200"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <span className="px-3 bg-white text-sm text-gray-500">Or drop us a message below</span>
-          </div>
-        </div>
-
-        <form className="mt-10 space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" id="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm p-3 border" placeholder="Your Name" />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" id="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm p-3 border" placeholder="you@example.com" />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" rows={5} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-pink-500 focus:ring-pink-500 sm:text-sm p-3 border" placeholder="Your message here..."></textarea>
-          </div>
-          <button type="button" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors">
-            Send Message
-          </button>
-        </form>
       </div>
       
       {/* Extended SEO Content Block */}
-      <div className="mt-20 pt-16 border-t border-gray-100 prose prose-lg prose-pink text-gray-700 mx-auto">
+      <div className="pt-16 border-t-2 border-pink-50 prose prose-lg prose-pink text-gray-700 mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Connecting Through the Power of Words</h2>
         <p>
           At Shayari Dunia, we believe that communication is the foundation of every strong relationship. Whether you are trying to express your deepest love, convey your sorrow, or simply make someone smile, the right words can make all the difference. This philosophy is not just something we apply to our poetry collection; it is the core principle of how we operate our platform and interact with our community.
@@ -70,7 +51,7 @@ export default function ContactPage() {
 
         <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Happens After You Contact Us?</h3>
         <p>
-          When you click that 'Send Message' button or drop an email to asbusiness276@gmail.com, your message doesn't disappear into a digital black hole. It goes directly into our primary inbox, which is monitored daily by our core team members.
+          When you click that email button or drop a message to asbusiness276@gmail.com, your message doesn't disappear into a digital black hole. It goes directly into our primary inbox, which is monitored daily by our core team members.
         </p>
         <p>
           We have a strict internal policy regarding communication. We aim to acknowledge receipt of every legitimate inquiry within 24 hours. Depending on the nature of your message, a full resolution or detailed response may take up to 3-5 business days. For instance, reviewing a poetry submission takes longer than fixing a broken link, as it requires our editorial team to evaluate the emotional resonance and structural quality of the verse.
