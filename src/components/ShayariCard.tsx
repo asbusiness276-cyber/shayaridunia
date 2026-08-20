@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Share2, Copy, Download } from 'lucide-react';
 import { useRef } from 'react';
 import { toPng } from 'html-to-image';
+import { generateSlug } from '@/utils/slugify';
 
 interface ShayariCardProps {
   shayari: {
@@ -13,6 +14,7 @@ interface ShayariCardProps {
     author: string;
     image: string;
     language: string;
+    category: string;
     alt_text: string;
   };
   isDetail?: boolean;
@@ -20,13 +22,14 @@ interface ShayariCardProps {
 
 export default function ShayariCard({ shayari, isDetail = false }: ShayariCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const slug = generateSlug(shayari);
 
   const handleDownload = async () => {
     if (cardRef.current === null) return;
     try {
       const dataUrl = await toPng(cardRef.current, { quality: 0.95 });
       const link = document.createElement('a');
-      link.download = `shayari-${shayari.id}.png`;
+      link.download = `shayari-${slug}.png`;
       link.href = dataUrl;
       link.click();
     } catch (err) {
@@ -40,7 +43,7 @@ export default function ShayariCard({ shayari, isDetail = false }: ShayariCardPr
   };
 
   const handleShare = () => {
-    const url = `${window.location.origin}/shayari/${shayari.id}`;
+    const url = `${window.location.origin}/shayari/${slug}`;
     if (navigator.share) {
       navigator.share({
         title: 'Shayari Dunia',
@@ -88,7 +91,7 @@ export default function ShayariCard({ shayari, isDetail = false }: ShayariCardPr
       {isDetail ? (
         ImageContent
       ) : (
-        <Link href={`/shayari/${shayari.id}`} className="block">
+        <Link href={`/shayari/${slug}`} className="block">
           {ImageContent}
         </Link>
       )}

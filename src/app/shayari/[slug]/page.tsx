@@ -2,14 +2,16 @@ import ShayariCard from '@/components/ShayariCard';
 import shayariData from '@/data/shayaris.json';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { generateSlug, getIdFromSlug } from '@/utils/slugify';
 
 interface Props {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const shayari = shayariData.find((s) => s.id === parseInt(resolvedParams.id));
+  const id = getIdFromSlug(resolvedParams.slug);
+  const shayari = shayariData.find((s) => s.id === id);
   
   if (!shayari) {
     return { title: 'Shayari Not Found - Shayari Dunia' };
@@ -34,13 +36,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export function generateStaticParams() {
   return shayariData.map((shayari) => ({
-    id: shayari.id.toString(),
+    slug: generateSlug(shayari),
   }));
 }
 
 export default async function ShayariDetailPage({ params }: Props) {
   const resolvedParams = await params;
-  const shayari = shayariData.find((s) => s.id === parseInt(resolvedParams.id));
+  const id = getIdFromSlug(resolvedParams.slug);
+  const shayari = shayariData.find((s) => s.id === id);
 
   if (!shayari) {
     notFound();
@@ -48,6 +51,7 @@ export default async function ShayariDetailPage({ params }: Props) {
 
   const langUpper = shayari.language.charAt(0).toUpperCase() + shayari.language.slice(1);
   const catUpper = shayari.category.charAt(0).toUpperCase() + shayari.category.slice(1);
+  const expectedSlug = generateSlug(shayari);
 
   // Generate JSON-LD Structured Data for Google Rich Snippets
   const jsonLd = {
@@ -62,7 +66,7 @@ export default async function ShayariDetailPage({ params }: Props) {
     },
     'image': shayari.image,
     'keywords': `${langUpper} shayari, ${catUpper} shayari`,
-    'url': `https://shayariduniacom.vercel.app/shayari/${shayari.id}`
+    'url': `https://shayariduniacom.vercel.app/shayari/${expectedSlug}`
   };
 
   return (
