@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
 import shayariData from '@/data/shayaris.json';
 
-const BASE_URL = 'https://shayariduniacom.vercel.app';
+const BASE_URL = 'https://shayaridunia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapData: MetadataRoute.Sitemap = [];
 
   // 1. Static Pages
-  const staticPages = ['', '/about', '/contact', '/privacy', '/terms'];
+  const staticPages = ['', '/about', '/categories', '/contact', '/privacy', '/terms'];
   staticPages.forEach((page) => {
     sitemapData.push({
       url: `${BASE_URL}${page}`,
@@ -34,8 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 3. Category Pages
-  const categories = ['love', 'sad', 'attitude', 'dosti', 'morning', 'festival'];
+  // 3. Category Pages (Dynamically extract all unique categories)
+  const categories = Array.from(new Set(shayariData.map(s => s.category)));
   languages.forEach((lang) => {
     categories.forEach((cat) => {
       sitemapData.push({
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 4. Individual Shayari Pages (900+ Pages)
+  // 4. Individual Shayari Pages
   shayariData.forEach((shayari) => {
     sitemapData.push({
       url: `${BASE_URL}/shayari/${shayari.slug}`,

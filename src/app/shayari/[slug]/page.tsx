@@ -62,7 +62,7 @@ export default async function ShayariDetailPage({ params }: Props) {
     },
     'image': shayari.image,
     'keywords': `${langUpper} shayari, ${catUpper} shayari`,
-    'url': `https://shayariduniacom.vercel.app/shayari/${shayari.slug}`
+    'url': `https://shayaridunia.com/shayari/${shayari.slug}`
   };
 
   return (
