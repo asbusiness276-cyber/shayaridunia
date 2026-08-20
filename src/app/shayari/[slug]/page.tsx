@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ShayariCard from '@/components/ShayariCard';
 import shayariData from '@/data/shayaris.json';
 import { notFound } from 'next/navigation';
@@ -95,12 +96,12 @@ export default async function ShayariDetailPage({ params }: Props) {
           Explore our massive collection of thousands of handpicked shayaris.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <a href={`/${shayari.language}`} className="px-6 py-3 bg-pink-600 text-white font-bold rounded-lg hover:bg-pink-700 transition-colors">
+          <Link href={`/${shayari.language}`} className="px-6 py-3 bg-pink-600 text-white font-bold rounded-lg hover:bg-pink-700 transition-colors">
             All {langUpper} Shayari
-          </a>
-          <a href={`/${shayari.language}/category/${shayari.category}`} className="px-6 py-3 bg-white border border-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-50 transition-colors">
+          </Link>
+          <Link href={`/${shayari.language}/category/${shayari.category}`} className="px-6 py-3 bg-white border border-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-50 transition-colors">
             More {catUpper} Quotes
-          </a>
+          </Link>
         </div>
       </div>
     </div>
