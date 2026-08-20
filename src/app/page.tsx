@@ -33,7 +33,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-indigo-50 via-white to-pink-50 min-h-screen">
+    <div>
       
       {/* Vibrant Hero Section */}
       <div className="relative pt-20 pb-16 overflow-hidden">
@@ -105,7 +105,7 @@ export default function Home() {
 
       {/* Latest Shayaris Grid (Making it Bhara Bhara) */}
       <div className="bg-gray-900 py-24 mb-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1534796636918-9f1d0ca8066f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534796636918-9f1d0ca8066f?q=80&w=2000&auto=format&fit=crop')" }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <span className="text-pink-400 font-bold tracking-wider uppercase text-sm mb-2 block">FRESH DROPS</span>
@@ -131,7 +131,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid md:grid-cols-3 gap-6">
           <Link href="/hindi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-extrabold text-white mb-2">Hindi Shayari</h3>
@@ -143,7 +143,7 @@ export default function Home() {
           </Link>
           
           <Link href="/punjabi" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605703819853-29a8a7ebdfaf?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605703819853-29a8a7ebdfaf?auto=format&fit=crop&q=80')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-extrabold text-white mb-2">Punjabi Shayari</h3>
@@ -155,7 +155,7 @@ export default function Home() {
           </Link>
 
           <Link href="/english" className="group relative h-72 rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1455390582262-044cdead2708?auto=format&fit=crop&q=80')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1455390582262-044cdead2708?auto=format&fit=crop&q=80')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-3xl font-extrabold text-white mb-2">English Quotes</h3>
