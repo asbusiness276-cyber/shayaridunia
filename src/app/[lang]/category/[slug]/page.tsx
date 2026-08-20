@@ -13,8 +13,22 @@ const categoryNames: Record<string, string> = {
   sad: 'Sad',
   attitude: 'Attitude',
   dosti: 'Dosti',
+  judai: 'Judai',
+  yaad: 'Yaad',
+  tareef: 'Tareef',
+  life: 'Life',
+  motivational: 'Motivational',
+  nature: 'Nature',
+  bachpan: 'Bachpan',
+  buddapa: 'Buddapa',
+  barish: 'Barish',
+  chai: 'Chai',
   morning: 'Good Morning',
-  festival: 'Festival'
+  night: 'Good Night',
+  festival: 'Festival',
+  family: 'Family',
+  'desh-prem': 'Desh Prem',
+  'two-line': 'Two Line'
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
