@@ -1,5 +1,155 @@
 [
   {
+    "id": 1003,
+    "language": "hindi",
+    "text": "तेरी मुस्कान से ही तो मेरी दुनिया में रौशनी है,\nतू नहीं तो ये ज़िन्दगी भी कितनी अधूरी है।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "love",
+    "alt_text": "Hindi Love Shayari",
+    "slug": "terii-muskaan-se-hii-to-merii-duniyaa-men-raushnii-hai-best-love-shayari-hindi-1003"
+  },
+  {
+    "id": 1004,
+    "language": "hindi",
+    "text": "वक्त के साथ सब बदल जाते हैं,\nसिर्फ यादें हैं जो हमेशा साथ रहती हैं।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=60",
+    "category": "yaad",
+    "alt_text": "Hindi Yaad Shayari",
+    "slug": "vkt-ke-saath-sb-bdl-jaate-hain-best-yaad-shayari-hindi-1004"
+  },
+  {
+    "id": 1005,
+    "language": "hindi",
+    "text": "हम वो नहीं जो किसी के पीछे खड़े हों,\nहमारी तो जगह ही सबसे आगे होती है।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=60",
+    "category": "attitude",
+    "alt_text": "Hindi Attitude Status",
+    "slug": "hm-vo-nhiin-jo-kisii-ke-piiche-khdd-e-hon-best-attitude-shayari-hindi-1005"
+  },
+  {
+    "id": 1006,
+    "language": "hindi",
+    "text": "दोस्ती वो नहीं जो रोज़ मिले,\nदोस्ती वो है जो दिल से दिल मिलाये।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&auto=format&fit=crop&q=60",
+    "category": "dosti",
+    "alt_text": "Hindi Dosti Shayari",
+    "slug": "dostii-vo-nhiin-jo-roj-mile-best-dosti-shayari-hindi-1006"
+  },
+  {
+    "id": 1007,
+    "language": "hindi",
+    "text": "सफर ज़िन्दगी का बहुत सुहाना है,\nअगर साथ चलने वाला कोई अपना है।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=60",
+    "category": "life",
+    "alt_text": "Hindi Life Quotes",
+    "slug": "sphr-j-indgii-kaa-bhut-suhaanaa-hai-best-life-shayari-hindi-1007"
+  },
+  {
+    "id": 1008,
+    "language": "punjabi",
+    "text": "ਤੇਰੇ ਬਿਨਾਂ ਇਹ ਦੁਨੀਆਂ ਫਿੱਕੀ ਲੱਗਦੀ ਐ,\nਤੂੰ ਹੀ ਤਾਂ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਰੌਣਕ ਐ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60",
+    "category": "love",
+    "alt_text": "Punjabi Love Shayari",
+    "slug": "punjabi-love-1007-best-love-shayari-punjabi-1008"
+  },
+  {
+    "id": 1009,
+    "language": "punjabi",
+    "text": "ਯਾਰਾਂ ਨਾਲ ਹੀ ਤਾਂ ਮਹਿਫ਼ਿਲਾਂ ਸਜਦੀਆਂ ਨੇ,\nਕੱਲੇ ਬਹਿ ਕੇ ਤਾਂ ਸਿਰਫ਼ ਯਾਦਾਂ ਆਉਂਦੀਆਂ ਨੇ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1510253687831-0f8cdfeea9ab?w=800&auto=format&fit=crop&q=60",
+    "category": "dosti",
+    "alt_text": "Punjabi Dosti Shayari",
+    "slug": "punjabi-dosti-1008-best-dosti-shayari-punjabi-1009"
+  },
+  {
+    "id": 1010,
+    "language": "punjabi",
+    "text": "ਅਸੀਂ ਆਪਣੀ ਮਰਜ਼ੀ ਦੇ ਮਾਲਕ ਆਂ,\nਕਿਸੇ ਦੇ ਇਸ਼ਾਰਿਆਂ ਤੇ ਨੱਚਣਾ ਸਾਨੂੰ ਨਹੀਂ ਆਉਂਦਾ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "attitude",
+    "alt_text": "Punjabi Attitude Status",
+    "slug": "punjabi-attitude-1009-best-attitude-shayari-punjabi-1010"
+  },
+  {
+    "id": 1011,
+    "language": "punjabi",
+    "text": "ਜ਼ਿੰਦਗੀ ਦਾ ਹਰ ਪਲ ਖੁੱਲ ਕੇ ਜੀਓ,\nਕੱਲ੍ਹ ਦਾ ਕੀ ਪਤਾ ਕਿਸਨੇ ਵੇਖਿਆ ਐ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=60",
+    "category": "life",
+    "alt_text": "Punjabi Life Quotes",
+    "slug": "punjabi-life-1010-best-life-shayari-punjabi-1011"
+  },
+  {
+    "id": 1012,
+    "language": "punjabi",
+    "text": "ਸਵੇਰ ਦੀ ਚਾਹ ਤੇ ਤੇਰੀ ਯਾਦ,\nਮੇਰੇ ਦਿਨ ਦੀ ਸ਼ੁਰੂਆਤ ਲਈ ਬਹੁਤ ਐ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=60",
+    "category": "chai",
+    "alt_text": "Punjabi Chai Shayari",
+    "slug": "punjabi-chai-1011-best-chai-shayari-punjabi-1012"
+  },
+  {
+    "id": 1013,
+    "language": "english",
+    "text": "In a sea of people,\nMy eyes will always search for you.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&auto=format&fit=crop&q=60",
+    "category": "love",
+    "alt_text": "English Love Quotes",
+    "slug": "in-a-sea-of-people-best-love-shayari-english-1013"
+  },
+  {
+    "id": 1014,
+    "language": "english",
+    "text": "True friends are never apart,\nMaybe in distance but never in heart.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=60",
+    "category": "dosti",
+    "alt_text": "English Friendship Quotes",
+    "slug": "true-friends-are-never-apart-best-dosti-shayari-english-1014"
+  },
+  {
+    "id": 1015,
+    "language": "english",
+    "text": "I don't have an attitude problem,\nI just have a personality you can't handle.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60",
+    "category": "attitude",
+    "alt_text": "English Attitude Status",
+    "slug": "i-dont-have-an-attitude-problem-best-attitude-shayari-english-1015"
+  },
+  {
+    "id": 1016,
+    "language": "english",
+    "text": "Life is what happens when you're busy making other plans.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1510253687831-0f8cdfeea9ab?w=800&auto=format&fit=crop&q=60",
+    "category": "life",
+    "alt_text": "English Life Quotes",
+    "slug": "life-is-what-happens-when-youre-busy-making-other-plans-best-life-shayari-english-1016"
+  },
+  {
+    "id": 1017,
+    "language": "english",
+    "text": "Success is not final, failure is not fatal:\nIt is the courage to continue that counts.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "motivational",
+    "alt_text": "English Motivational Quotes",
+    "slug": "success-is-not-final-failure-is-not-fatal-best-motivational-shayari-english-1017"
+  },
+  {
     "id": 975,
     "language": "punjabi",
     "text": "ਤੇਰੇ ਬਿਨਾਂ ਜ਼ਿੰਦਗੀ ਵੀਰਾਨ ਜਿਹੀ ਲੱਗਦੀ ਹੈ,\nਹਰ ਮਹਿਫ਼ਿਲ ਹੁਣ ਸੁੰਨਸਾਨ ਜਿਹੀ ਲੱਗਦੀ ਹੈ।",
