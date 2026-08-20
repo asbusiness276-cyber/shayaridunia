@@ -11,7 +11,7 @@ interface ShayariCardProps {
   shayari: {
     id: number;
     text: string;
-    author: string;
+    author?: string;
     image: string;
     language: string;
     category: string;
