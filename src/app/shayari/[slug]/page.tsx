@@ -90,7 +90,26 @@ export default async function ShayariDetailPage({ params }: Props) {
         <ShayariCard shayari={shayari} isDetail={true} />
       </div>
       
+      
+      {/* Related Shayaris */}
+      <div className="mt-20">
+        <h3 className="text-2xl font-extrabold text-gray-900 mb-8 flex items-center">
+          <span className="w-8 h-1 bg-pink-500 rounded-full mr-4"></span>
+          More {catUpper} Shayaris
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {shayariData
+            .filter(s => s.category === shayari.category && s.id !== shayari.id)
+            .slice(0, 3)
+            .map(related => (
+              <ShayariCard key={related.id} shayari={related} />
+            ))
+          }
+        </div>
+      </div>
+      
       <div className="mt-16 text-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+
         <h3 className="text-xl font-bold text-gray-900 mb-4">Looking for more?</h3>
         <p className="text-gray-600 mb-6">
           Explore our massive collection of thousands of handpicked shayaris.
