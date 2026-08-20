@@ -64,7 +64,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-1 sm:space-x-4">
             <div className="relative group">
               <button className="flex items-center gap-1 font-medium text-gray-700 hover:text-pink-600 transition-colors h-16">
-                Collections <ChevronDown className="w-4 h-4" />
+                Top 50 <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute top-16 left-0 w-48 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
                 {languages.map((lang) => (
@@ -140,7 +140,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md pb-4 pt-2 max-h-[80vh] overflow-y-auto">
           <div className="px-4 space-y-1">
-            <div className="py-2 font-bold text-pink-600 border-b border-gray-100 mb-2">Collections</div>
+            <div className="py-2 font-bold text-pink-600 border-b border-gray-100 mb-2">Top 50</div>
             {languages.map((lang) => (
               <Link
                 key={`mobile-col-${lang}`}
