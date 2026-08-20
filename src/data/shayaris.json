@@ -1,5 +1,155 @@
 [
   {
+    "id": 1018,
+    "language": "hindi",
+    "text": "आज मौसम में अजीब सी बात है,\nलगता है जैसे तुम्हारी यादों की बारात है।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "barish",
+    "alt_text": "Hindi Barish Shayari",
+    "slug": "aaj-mausm-men-ajiib-sii-baat-hai-best-barish-shayari-hindi-1018"
+  },
+  {
+    "id": 1019,
+    "language": "hindi",
+    "text": "बचपन की वो गलियां बहुत याद आती हैं,\nजहाँ हम बिना किसी फिक्र के खेलते थे।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=60",
+    "category": "bachpan",
+    "alt_text": "Hindi Bachpan Shayari",
+    "slug": "bcpn-kii-vo-gliyaan-bhut-yaad-aatii-hain-best-bachpan-shayari-hindi-1019"
+  },
+  {
+    "id": 1020,
+    "language": "hindi",
+    "text": "सुबह की ठंडी हवा और एक कप चाय,\nज़िन्दगी का असली मज़ा तो इसी में है।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=60",
+    "category": "chai",
+    "alt_text": "Hindi Chai Quotes",
+    "slug": "subh-kii-tthnddii-hvaa-aur-ek-kp-caay-best-chai-shayari-hindi-1020"
+  },
+  {
+    "id": 1021,
+    "language": "hindi",
+    "text": "परिवार से बड़ा कोई धन नहीं,\nऔर माँ-बाप के आशीर्वाद से बड़ा कोई वरदान नहीं।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&auto=format&fit=crop&q=60",
+    "category": "family",
+    "alt_text": "Hindi Family Shayari",
+    "slug": "privaar-se-bdd-aa-koii-dhn-nhiin-best-family-shayari-hindi-1021"
+  },
+  {
+    "id": 1022,
+    "language": "hindi",
+    "text": "देश के लिए मर मिटना ही सच्ची शहादत है,\nमेरा भारत हमेशा महान रहेगा।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=60",
+    "category": "desh-prem",
+    "alt_text": "Hindi Desh Prem Shayari",
+    "slug": "desh-ke-lie-mr-mittnaa-hii-sccii-shhaadt-hai-best-desh-prem-shayari-hindi-1022"
+  },
+  {
+    "id": 1023,
+    "language": "punjabi",
+    "text": "ਸੱਚਾ ਪਿਆਰ ਕਦੇ ਖਤਮ ਨਹੀਂ ਹੁੰਦਾ,\nਬਸ ਵਕਤ ਦੇ ਨਾਲ ਹੋਰ ਗੂੜ੍ਹਾ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60",
+    "category": "love",
+    "alt_text": "Punjabi Love Quotes",
+    "slug": "punjabi-love-1022-best-love-shayari-punjabi-1023"
+  },
+  {
+    "id": 1024,
+    "language": "punjabi",
+    "text": "ਜੁਦਾਈ ਦਾ ਦਰਦ ਉਹੀ ਜਾਣਦਾ ਹੈ,\nਜਿਸਨੇ ਆਪਣਾ ਕੋਈ ਪਿਆਰਾ ਗਵਾਇਆ ਹੋਵੇ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1510253687831-0f8cdfeea9ab?w=800&auto=format&fit=crop&q=60",
+    "category": "judai",
+    "alt_text": "Punjabi Judai Shayari",
+    "slug": "punjabi-judai-1023-best-judai-shayari-punjabi-1024"
+  },
+  {
+    "id": 1025,
+    "language": "punjabi",
+    "text": "ਤੇਰੀ ਤਾਰੀਫ਼ ਵਿੱਚ ਕੀ ਕਹਾਂ,\nਲਫ਼ਜ਼ ਵੀ ਘੱਟ ਪੈ ਜਾਂਦੇ ਨੇ ਤੇਰਾ ਹੁਸਨ ਬਿਆਨ ਕਰਨ ਲਈ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "tareef",
+    "alt_text": "Punjabi Tareef Shayari",
+    "slug": "punjabi-tareef-1024-best-tareef-shayari-punjabi-1025"
+  },
+  {
+    "id": 1026,
+    "language": "punjabi",
+    "text": "ਬਚਪਨ ਦੀਆਂ ਉਹ ਮਿੱਠੀਆਂ ਯਾਦਾਂ,\nਅੱਜ ਵੀ ਮੇਰੇ ਚਿਹਰੇ ਤੇ ਮੁਸਕਾਨ ਲੈ ਆਉਂਦੀਆਂ ਨੇ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=60",
+    "category": "bachpan",
+    "alt_text": "Punjabi Childhood Memories",
+    "slug": "punjabi-bachpan-1025-best-bachpan-shayari-punjabi-1026"
+  },
+  {
+    "id": 1027,
+    "language": "punjabi",
+    "text": "ਰਾਤ ਦੀ ਚਾਨਣੀ ਵਿੱਚ ਤੇਰੀ ਯਾਦ ਦਾ ਸਹਾਰਾ ਹੈ,\nਬਸ ਇਹੋ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦਾ ਗੁਜ਼ਾਰਾ ਹੈ।",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=60",
+    "category": "night",
+    "alt_text": "Punjabi Good Night Shayari",
+    "slug": "punjabi-night-1026-best-night-shayari-punjabi-1027"
+  },
+  {
+    "id": 1028,
+    "language": "english",
+    "text": "The rain reminds me of the tears we shed,\nBut also of the rainbows that lie ahead.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&auto=format&fit=crop&q=60",
+    "category": "barish",
+    "alt_text": "English Rain Quotes",
+    "slug": "the-rain-reminds-me-of-the-tears-we-shed-best-barish-shayari-english-1028"
+  },
+  {
+    "id": 1029,
+    "language": "english",
+    "text": "Childhood is the most beautiful of all life's seasons.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=60",
+    "category": "bachpan",
+    "alt_text": "English Childhood Quotes",
+    "slug": "childhood-is-the-most-beautiful-of-all-lifes-seasons-best-bachpan-shayari-english-1029"
+  },
+  {
+    "id": 1030,
+    "language": "english",
+    "text": "A cup of tea solves everything.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60",
+    "category": "chai",
+    "alt_text": "English Tea Lovers Quotes",
+    "slug": "a-cup-of-tea-solves-everything-best-chai-shayari-english-1030"
+  },
+  {
+    "id": 1031,
+    "language": "english",
+    "text": "Family is not an important thing,\nIt is everything.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1510253687831-0f8cdfeea9ab?w=800&auto=format&fit=crop&q=60",
+    "category": "family",
+    "alt_text": "English Family Quotes",
+    "slug": "family-is-not-an-important-thing-best-family-shayari-english-1031"
+  },
+  {
+    "id": 1032,
+    "language": "english",
+    "text": "Patriotism is not short, frenzied outbursts of emotion,\nBut the tranquil and steady dedication of a lifetime.",
+    "author": "Unknown",
+    "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&auto=format&fit=crop&q=60",
+    "category": "desh-prem",
+    "alt_text": "English Patriotism Quotes",
+    "slug": "patriotism-is-not-short-frenzied-outbursts-of-emotion-best-desh-prem-shayari-english-1032"
+  },
+  {
     "id": 1003,
     "language": "hindi",
     "text": "तेरी मुस्कान से ही तो मेरी दुनिया में रौशनी है,\nतू नहीं तो ये ज़िन्दगी भी कितनी अधूरी है।",
