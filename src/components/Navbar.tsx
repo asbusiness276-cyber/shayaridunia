@@ -32,6 +32,23 @@ export default function Navbar() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1 sm:space-x-4">
+            <div className="relative group">
+              <button className="flex items-center gap-1 font-medium text-gray-700 hover:text-pink-600 transition-colors h-16">
+                Collections <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-16 left-0 w-48 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                {languages.map((lang) => (
+                  <Link
+                    key={lang}
+                    href={`/${lang.toLowerCase()}/top-50`}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                  >
+                    Top 50 {lang}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {languages.map((lang) => (
               <div key={lang} className="relative group">
                 <Link href={`/${lang.toLowerCase()}`} className="flex items-center text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -74,8 +91,21 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md pb-4 pt-2">
+          <div className="px-4 space-y-1">
+            <div className="py-2 font-bold text-pink-600 border-b border-gray-100 mb-2">Collections</div>
+            {languages.map((lang) => (
+              <Link
+                key={`mobile-col-${lang}`}
+                href={`/${lang.toLowerCase()}/top-50`}
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Top 50 {lang}
+              </Link>
+            ))}
+            
+            <div className="py-2 font-bold text-pink-600 border-b border-gray-100 mb-2 mt-4">Languages</div>
             {languages.map((lang) => (
               <div key={lang}>
                 <Link href={`/${lang.toLowerCase()}`} className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-50">
