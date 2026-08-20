@@ -45,9 +45,9 @@ export default function Home() {
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-pink-200 text-pink-600 font-bold tracking-wider uppercase text-xs mb-8 shadow-sm">
             <Sparkles className="w-4 h-4" /> SHAYARI • FEELINGS • WORDS
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 mb-8 tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-8 tracking-tight leading-tight">
             कुछ एहसास <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 italic drop-shadow-sm">लफ़्ज़ों से बड़े होते हैं।</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 drop-shadow-sm">लफ़्ज़ों से बड़े होते हैं।</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
             जो बात दिल में रह जाती है, उसे शायरी कह देती है। अपने mood की शायरी पढ़ें, copy करें और अपनों तक पहुँचाएँ।
@@ -78,7 +78,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center mb-12">
           <span className="text-indigo-600 font-bold tracking-wider uppercase text-sm mb-2 block">EXPLORE MOODS</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">आज दिल किस mood में है?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">आज दिल किस mood में है?</h2>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
