@@ -1,7 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { PenTool, ChevronDown, Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -19,12 +20,12 @@ export default function Navbar() {
   const languages = ['Hindi', 'Punjabi', 'English'];
 
   return (
-    <nav className="border-b bg-white sticky top-0 z-50 shadow-sm">
+    <nav className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-              <PenTool className="h-6 w-6 text-pink-600" />
+              <Image src="/logo.jpg" alt="Shayari Dunia Logo" width={36} height={36} className="rounded-md" />
               <span className="font-bold text-xl tracking-tight text-gray-900">Shayari Dunia</span>
             </Link>
           </div>

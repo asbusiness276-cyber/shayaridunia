@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PenTool } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <PenTool className="h-6 w-6 text-pink-600" />
+              <Image src="/logo.jpg" alt="Shayari Dunia Logo" width={40} height={40} className="rounded-md" />
               <span className="font-bold text-xl tracking-tight text-gray-900">Shayari Dunia</span>
             </Link>
             <p className="text-gray-500 mb-6 max-w-sm">
