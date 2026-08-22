@@ -48,8 +48,8 @@ export default function Home() {
               explanation.
             </p>
             <div className="hero-actions">
-              <a className="button primary" href="#emotions">Explore emotions <span>↓</span></a>
-              <Link className="button secondary" href="/hindi/love">Love Shayari <span>♡</span></Link>
+              <Link className="button primary" href="/categories">Explore emotions <span>→</span></Link>
+              <Link className="button secondary" href="/hindi/love">Love Shayari <span>→</span></Link>
             </div>
             <dl className="hero-stats">
               <div><dt>03</dt><dd>Languages</dd></div>

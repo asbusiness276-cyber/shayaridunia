@@ -18,7 +18,7 @@ export function SiteHeader() {
             {language.nativeLabel}
           </Link>
         ))}
-        <Link href="/#emotions">Emotions</Link>
+        <Link href="/categories">Emotions</Link>
       </nav>
     </header>
   );
@@ -38,7 +38,7 @@ export function SiteFooter() {
         <Link href="/hindi">Hindi Shayari</Link>
         <Link href="/punjabi">Punjabi Status</Link>
         <Link href="/english">English Quotes</Link>
-        <Link href="/#emotions">All emotions</Link>
+        <Link href="/categories">All emotions</Link>
       </div>
       <div className="footer-links" style={{marginTop: "1rem"}}>
         <Link href="/about">About Us</Link>
