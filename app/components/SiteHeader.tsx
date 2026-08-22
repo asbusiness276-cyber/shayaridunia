@@ -40,6 +40,12 @@ export function SiteFooter() {
         <Link href="/english">English Quotes</Link>
         <Link href="/#emotions">All emotions</Link>
       </div>
+      <div className="footer-links" style={{marginTop: "1rem"}}>
+        <Link href="/about">About Us</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/privacy">Privacy Policy</Link>
+        <Link href="/terms">Terms & Conditions</Link>
+      </div>
       <p className="copyright">© 2026 Shayari Dunia</p>
     </footer>
   );
