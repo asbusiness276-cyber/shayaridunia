@@ -61,6 +61,50 @@ export function QuoteGrid({ quotes, languageLabel }: QuoteGridProps) {
     flash(quote.id, copied ? "Link copied" : "Share unavailable");
   };
 
+  const downloadImage = async (quote: Quote) => {
+    flash(quote.id, "Downloading...");
+    try {
+      const response = await fetch(quote.imageUrl);
+      const svgText = await response.text();
+      
+      const canvas = document.createElement("canvas");
+      canvas.width = 1080;
+      canvas.height = 1350;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      
+      const img = new Image();
+      const svgBlob = new Blob([svgText], { type: "image/svg+xml;charset=utf-8" });
+      const DOMURL = window.URL || window.webkitURL || window;
+      const url = DOMURL.createObjectURL(svgBlob);
+      
+      img.onload = () => {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, 1080, 1350);
+        DOMURL.revokeObjectURL(url);
+        
+        const jpgUrl = canvas.toDataURL("image/jpeg", 0.9);
+        const a = document.createElement("a");
+        a.href = jpgUrl;
+        a.download = `${quote.language}-${quote.emotion}-${quote.index}.jpg`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        flash(quote.id, "Downloaded");
+      };
+      
+      img.onerror = () => {
+        flash(quote.id, "Download failed");
+      };
+      
+      img.src = url;
+    } catch (e) {
+      console.error(e);
+      flash(quote.id, "Download failed");
+    }
+  };
+
   return (
     <div className="quote-grid" aria-label={`${quotes.length} shayari image cards`}>
       {quotes.map((quote, position) => (
@@ -93,12 +137,9 @@ export function QuoteGrid({ quotes, languageLabel }: QuoteGridProps) {
               <button onClick={() => copyQuote(quote)} type="button">
                 <span aria-hidden="true">⧉</span> Copy
               </button>
-              <a
-                download={`${quote.language}-${quote.emotion}-${quote.index}.svg`}
-                href={quote.imageUrl}
-              >
+              <button onClick={() => downloadImage(quote)} type="button">
                 <span aria-hidden="true">↓</span> Image
-              </a>
+              </button>
               <button onClick={() => shareQuote(quote)} type="button">
                 <span aria-hidden="true">↗</span> Share
               </button>
