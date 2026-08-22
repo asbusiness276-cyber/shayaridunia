@@ -4,8 +4,8 @@ import { languages } from "../../lib/shayari";
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Shayari Dunia home">
-        <img src="/logo.jpg" alt="Logo" style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }} />
+      <Link className="brand" href="/" aria-label="Shayari Dunia home" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <img src="/logo.jpg" alt="Logo" style={{ width: "56px", height: "56px", borderRadius: "20%", objectFit: "cover", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }} />
         <span>
           <strong>Shayari Dunia</strong>
           <small>Har ehsaas, khoobsurat alfaaz</small>
@@ -28,9 +28,9 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <Link className="brand footer-brand" href="/">
-          <img src="/logo.jpg" alt="Logo" style={{ width: "32px", height: "32px", borderRadius: "50%", objectFit: "cover", filter: "grayscale(100%)" }} />
-          <span><strong>Shayari Dunia</strong><small>Words worth sharing.</small></span>
+        <Link className="brand footer-brand" href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <img src="/logo.jpg" alt="Logo" style={{ width: "48px", height: "48px", borderRadius: "20%", objectFit: "cover" }} />
+          <span><strong style={{ fontSize: '1.2rem' }}>Shayari Dunia</strong><small>Words worth sharing.</small></span>
         </Link>
         <p>Original Hindi shayari, Punjabi status and English quotes with images and clear meanings.</p>
       </div>
