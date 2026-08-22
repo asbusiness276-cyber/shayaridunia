@@ -90,6 +90,26 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <div className="blog-content" style={{ fontSize: '1.15rem', color: '#333', lineHeight: 1.8 }} dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
 
+        {/* Author Profile */}
+        <div style={{ marginTop: '4rem', padding: '2rem', backgroundColor: '#f9f9f9', borderRadius: '16px', display: 'flex', gap: '2rem', alignItems: 'center', border: '1px solid #eaeaea' }}>
+          <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: '#ff2a5f', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '2rem', fontWeight: 'bold', flexShrink: 0 }}>
+            S
+          </div>
+          <div>
+            <p className="eyebrow" style={{ margin: 0, color: '#ff2a5f', fontWeight: 600 }}>Written by</p>
+            <h3 style={{ fontSize: '1.5rem', margin: '0.25rem 0', color: '#111' }}>
+              <Link href="/author/saahil" style={{ color: 'inherit', textDecoration: 'none' }}>Saahil</Link>
+            </h3>
+            <p style={{ color: '#555', margin: 0, lineHeight: 1.5 }}>
+              Founder of Shayari Dunia. Exploring the depth of words, emotions, and poetry. 
+              <br />
+              <a href="https://instagram.com/RealSaahilMusic" target="_blank" rel="noopener noreferrer" style={{ color: '#ff2a5f', textDecoration: 'none', fontWeight: 500, display: 'inline-block', marginTop: '0.5rem' }}>
+                @RealSaahilMusic
+              </a>
+            </p>
+          </div>
+        </div>
+
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <section style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '1px solid #eaeaea' }}>
