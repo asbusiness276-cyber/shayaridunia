@@ -298,6 +298,13 @@ export const emotions: Emotion[] = [
     ["ਦੋ ਲਾਈਨਾਂ", "ਘੱਟ ਲਫ਼ਜ਼ਾਂ ਵਿੱਚ ਡੂੰਘਾ ਅਰਥ ਸਭ ਤੋਂ ਸਿੱਧਾ ਅਸਰ ਛੱਡਦਾ ਹੈ", "ਦੋ ਲਾਈਨਾਂ ਪੂਰਾ ਅਹਿਸਾਸ ਕਹਿ ਦਿੰਦੀਆਂ ਹਨ", "ਗੱਲ ਬਿਨਾਂ ਭਟਕੇ ਸਿੱਧੀ ਦਿਲ ਤੱਕ ਪਹੁੰਚਦੀ ਹੈ"],
     ["Two-line", "a deep meaning in few words leaves the clearest impact", "two lines express an entire feeling", "the message reaches the heart without wandering"],
   ),
+  emotion(
+    "motivational",
+    "⭐",
+    ["प्रेरणादायक", "सच्ची मेहनत और लगन से हर नामुमकिन मंज़िल हासिल की जा सकती है", "हौसला टूटने के बाद भी एक नई उम्मीद जागती है", "हर हार एक नई और बड़ी जीत की तैयारी बन जाती है"],
+    ["ਮੋਟੀਵੇਸ਼ਨਲ", "ਸੱਚੀ ਮਿਹਨਤ ਅਤੇ ਲਗਨ ਨਾਲ ਹਰ ਨਾਮੁਮਕਿਨ ਮੰਜ਼ਿਲ ਹਾਸਿਲ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ", "ਹੌਂਸਲਾ ਟੁੱਟਣ ਤੋਂ ਬਾਅਦ ਵੀ ਇੱਕ ਨਵੀਂ ਉਮੀਦ ਜਾਗਦੀ ਹੈ", "ਹਰ ਹਾਰ ਇੱਕ ਨਵੀਂ ਅਤੇ ਵੱਡੀ ਜਿੱਤ ਦੀ ਤਿਆਰੀ ਬਣ ਜਾਂਦੀ ਹੈ"],
+    ["Motivational", "true hard work and dedication can achieve every impossible goal", "a new hope awakens even after courage breaks", "every defeat becomes preparation for a new and bigger victory"],
+  ),
 ];
 
 const quoteTemplates: Record<LanguageSlug, Array<(e: Emotion) => string>> = {
