@@ -193,11 +193,11 @@ export default async function EmotionCollection({ params }: PageProps) {
           </section>
 
           <section className="faq-section" aria-labelledby="collection-faq-title">
-            <div><p className="eyebrow">About this collection</p><h2 id="collection-faq-title">Use, meaning and images.</h2></div>
+            <div><p className="eyebrow">About this collection</p><h2 id="collection-faq-title">Everything you need to know.</h2></div>
             <div className="faq-list">
-              <details open><summary>Is page par kitni images hain?</summary><p>Is collection me exactly 18 shayari images hain. Har image 1080 × 1350 ke 4:5 format me banayi gayi hai.</p></details>
-              <details><summary>Explanation kahan milega?</summary><p>Har image ke neeche quote ka text aur Meaning section diya gaya hai. Meaning image ke andar छुपा nahi hai, isliye padhna आसान hai.</p></details>
-              <details><summary>Kya same quote dusre URLs par repeat hota hai?</summary><p>Nahi. Is collection ka har text isi page ke ek permanent anchor se जुड़ा hai. Duplicate status, viral ya premium URLs nahi banaye gaye.</p></details>
+              <details open><summary>How many images are in this collection?</summary><p>This specific collection contains exactly 18 carefully curated quotes. Each quote comes with a beautifully designed 1080 x 1350 image that fits perfectly on your social media feeds without any cropping.</p></details>
+              <details><summary>Where can I find the meaning of the quote?</summary><p>Right below the image! We provide a clear English explanation for every single quote, so you can fully understand the depth of the words and share them with the right intentions.</p></details>
+              <details><summary>Can I download these images for free?</summary><p>Yes, all images in this collection are completely free to download. Just click the "Image" button below any quote to save the high-resolution version directly to your device.</p></details>
             </div>
           </section>
         </div>

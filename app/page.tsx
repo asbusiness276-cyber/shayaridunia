@@ -111,24 +111,25 @@ export default function Home() {
           <section className="promise-section">
             <div className="promise-intro">
               <p className="eyebrow">Why Shayari Dunia</p>
-              <h2>Sirf lines nahi.<br />Har line ka matlab.</h2>
+              <h2>Not just words.<br />We deliver meaning.</h2>
             </div>
             <div className="promise-grid">
-              <article><span>01</span><h3>Original writing</h3><p>Har collection ke liye alag shayari. Ek hi quote ko multiple URLs par repeat nahi kiya gaya.</p></article>
-              <article><span>02</span><h3>Image ready</h3><p>Har shayari ka 4:5 share card, Instagram, WhatsApp aur stories ke liye ready.</p></article>
-              <article><span>03</span><h3>Clear meaning</h3><p>Har quote ke neeche simple explanation, taaki lafzon ka context bhi samajh aaye.</p></article>
+              <article><span>01</span><h3>Original writing</h3><p>We craft unique content for every collection. No recycling the same quote across multiple pages.</p></article>
+              <article><span>02</span><h3>Image ready</h3><p>Every quote comes with a perfectly sized 4:5 image card, ready for Instagram, WhatsApp, and Facebook stories.</p></article>
+              <article><span>03</span><h3>Clear meaning</h3><p>We provide a simple English explanation below every quote, ensuring the true context of the words is always understood.</p></article>
             </div>
           </section>
 
           <section className="faq-section" aria-labelledby="faq-title">
             <div>
               <p className="eyebrow">Common questions</p>
-              <h2 id="faq-title">Shayari share karna ab simple hai.</h2>
+              <h2 id="faq-title">Everything you need to know about Shayari Dunia.</h2>
             </div>
             <div className="faq-list">
-              <details open><summary>Kya images free download ho sakti hain?</summary><p>Haan. Har shayari card par Image button se 1080 × 1350 share card download kiya ja sakta hai.</p></details>
-              <details><summary>Kya Hindi, Punjabi aur English teeno available hain?</summary><p>Haan. Har major emotion ke liye teeno languages me dedicated collection pages hain.</p></details>
-              <details><summary>Ek page par kitni shayari hain?</summary><p>Har collection page par 18 shayari images hain, jisse page fast aur comfortable rehta hai.</p></details>
+              <details open><summary>Are the quote images free to download?</summary><p>Yes, absolutely. Every single shayari or quote on our platform comes with a high-resolution, watermark-free image (1080 x 1350 format) that you can instantly download by clicking the "Image" button. They are perfectly sized for Instagram posts, stories, and WhatsApp statuses.</p></details>
+              <details><summary>Is the content copied from other websites?</summary><p>No. We take pride in curating and writing 100% original content. Unlike many platforms that recycle the same old lines, our team ensures that every quote is fresh, grammatically correct, and deeply meaningful.</p></details>
+              <details><summary>Why do you provide explanations below the quotes?</summary><p>Poetry, especially classic Hindi and Punjabi Shayari, often uses complex vocabulary (like Urdu or traditional Gurmukhi terms). Our simple English explanations below each quote help you fully grasp the depth and context of the words before you share them with someone special.</p></details>
+              <details><summary>Do you update the collections regularly?</summary><p>Yes! We add fresh, trending quotes and shayaris across all three languages (Hindi, Punjabi, and English) every week to ensure you always have new content to express your feelings.</p></details>
             </div>
           </section>
         </div>
