@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CategoryExplorer } from "./components/CategoryExplorer";
 import { QuoteGrid } from "./components/QuoteGrid";
 import { SiteFooter, SiteHeader } from "./components/SiteHeader";
+import { HomeSEOContent } from "./components/HomeSEOContent";
 import {
   emotions,
   getFeaturedQuotes,
@@ -90,6 +91,8 @@ export default function Home() {
             </a>
           ))}
         </section>
+
+        <HomeSEOContent />
 
         <div id="emotions" className="page-shell">
           <CategoryExplorer emotions={emotions} />
