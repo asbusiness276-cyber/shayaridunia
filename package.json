@@ -1,30 +1,35 @@
 {
-  "name": "shayaridunia.com",
-  "version": "0.1.0",
+  "name": "shayari-dunia-vercel",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0 <25.0.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "node --require ./scripts/node-memory-shim.cjs ./node_modules/next/dist/bin/next dev",
+    "build": "node --require ./scripts/node-memory-shim.cjs ./node_modules/next/dist/bin/next build",
+    "start": "node --require ./scripts/node-memory-shim.cjs ./node_modules/next/dist/bin/next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "security:audit": "npm audit --omit=dev --audit-level=high",
+    "test:content": "node --test tests/content.test.mjs",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "verify": "npm run lint && npm run test:content && npm run security:audit && npm run build && npm run typecheck && npm run test:smoke"
   },
   "dependencies": {
-    "googleapis": "^176.0.0",
-    "html-to-image": "^1.11.13",
-    "lucide-react": "^1.33.0",
-    "next": "16.3.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "transliteration": "^2.6.1"
+    "next": "16.3.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.1",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.2",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3"
   }
 }

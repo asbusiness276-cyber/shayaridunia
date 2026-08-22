@@ -1,23 +1,26 @@
 import type { NextConfig } from "next";
-import shayariData from "./src/data/shayaris.json";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
+  poweredByHeader: false,
+  reactStrictMode: true,
+  async headers() {
+    return [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
       },
-    ],
-  },
-  async redirects() {
-    return shayariData.map((s) => ({
-      source: `/shayari/${s.id}`,
-      destination: `/shayari/${s.slug}`,
-      permanent: true,
-    }));
+    ];
   },
 };
 
