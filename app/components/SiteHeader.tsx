@@ -42,9 +42,10 @@ export function SiteFooter() {
       </div>
       <div className="footer-links" style={{marginTop: "1rem"}}>
         <Link href="/about">About Us</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact">Contact Us</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="/privacy">Privacy Policy</Link>
-        <Link href="/terms">Terms & Conditions</Link>
+        <Link href="/terms">Terms of Service</Link>
       </div>
       <p className="copyright">© 2026 Shayari Dunia</p>
     </footer>
