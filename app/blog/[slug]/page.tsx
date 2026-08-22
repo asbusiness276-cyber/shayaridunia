@@ -58,7 +58,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const relatedPosts = allFiles
     .sort(() => 0.5 - Math.random())
     .slice(0, 2)
-    .map(file => JSON.parse(fs.readFileSync(path.join(blogsDir, file), 'utf8')));
+    .map(file => {
+      const parsed = JSON.parse(fs.readFileSync(path.join(blogsDir, file), 'utf8'));
+      parsed.slug = file.replace('.json', '');
+      return parsed;
+    });
 
   return (
     <>
